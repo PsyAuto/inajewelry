@@ -327,6 +327,9 @@
 
           <div class="product-single__description rte" itemprop="description">
             {{ product.description }}
+            {% if product.type == 'ring' %}
+                {% include 'size-guide' %}
+            {% endif %}
           </div>
 
           {% if section.settings.social_sharing_products %}
