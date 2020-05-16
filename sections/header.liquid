@@ -131,42 +131,8 @@
                 </button>
               </div>
             </div>
-            <div class="grid__item large--one-third medium-down--one-half">
-              {% comment %}
-                Use the uploaded logo from theme settings if enabled.
-                Site name gets precedence with H1 tag on homepage, div on other pages.
-              {% endcomment %}
-              {% if request.page_type == 'index' %}
-                <h1 class="site-header__logo large--left" itemscope itemtype="http://schema.org/Organization">
-              {% else %}
-                <div class="h1 site-header__logo large--left" itemscope itemtype="http://schema.org/Organization">
-              {% endif %}
-                {% capture image_size %}{{ logo_max_width | escape }}x{% endcapture %}
 
-                <a href="{{ routes.root_url }}" itemprop="url" class="site-header__logo-link">
-                  {% if section.settings.logo %}
-                    <img class="site-header__logo-image" src="{{ section.settings.logo | img_url: image_size }}" srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
-
-                    {% if request.page_type == 'index' and section.settings.transparent_header_enable %}
-                      {% if section.settings.transparent_logo == blank %}
-                        {%- assign transparent_logo = section.settings.logo -%}
-                      {% else %}
-                        {%- assign transparent_logo = section.settings.transparent_logo -%}
-                      {% endif %}
-
-                      <img class="site-header__logo-image site-header__logo-image--transparent" src="{{ transparent_logo | img_url: image_size }}" srcset="{{ transparent_logo | img_url: image_size }} 1x, {{ transparent_logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
-                    {% endif %}
-                  {% else %}
-                    {{ shop.name }}
-                  {% endif %}
-                </a>
-              {% if request.page_type == 'index' %}
-                </h1>
-              {% else %}
-                </div>
-              {% endif %}
-            </div>
-            <nav class="grid__item large--two-thirds large--text-right medium-down--hide" role="navigation">
+            <nav class="grid__item large--text-right medium-down--hide" role="navigation">
               {% comment %}
                 List out your main-menu linklist (default)
 
@@ -323,7 +289,45 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="wrapper">
+          <div class="grid--full grid--table">
+        <div class="grid__item medium-down--one-half">
+          {% comment %}
+            Use the uploaded logo from theme settings if enabled.
+            Site name gets precedence with H1 tag on homepage, div on other pages.
+          {% endcomment %}
+          {% if request.page_type == 'index' %}
+            <h1 class="site-header__logo large" itemscope itemtype="http://schema.org/Organization">
+          {% else %}
+            <div class="h1 site-header__logo large" itemscope itemtype="http://schema.org/Organization">
+          {% endif %}
+            {% capture image_size %}{{ logo_max_width | escape }}x{% endcapture %}
 
+            <a href="{{ routes.root_url }}" itemprop="url" class="site-header__logo-link">
+              {% if section.settings.logo %}
+                <img class="site-header__logo-image" src="{{ section.settings.logo | img_url: image_size }}" srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+
+                {% if request.page_type == 'index' and section.settings.transparent_header_enable %}
+                  {% if section.settings.transparent_logo == blank %}
+                    {%- assign transparent_logo = section.settings.logo -%}
+                  {% else %}
+                    {%- assign transparent_logo = section.settings.transparent_logo -%}
+                  {% endif %}
+
+                  <img class="site-header__logo-image site-header__logo-image--transparent" src="{{ transparent_logo | img_url: image_size }}" srcset="{{ transparent_logo | img_url: image_size }} 1x, {{ transparent_logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+                {% endif %}
+              {% else %}
+                {{ shop.name }}
+              {% endif %}
+            </a>
+          {% if request.page_type == 'index' %}
+            </h1>
+          {% else %}
+            </div>
+          {% endif %}
+        </div>
+          </div>
         </div>
       </header>
     </div>
