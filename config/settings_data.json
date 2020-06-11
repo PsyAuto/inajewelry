@@ -69,7 +69,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/IMG_20200225_140702.png",
+          "logo": "shopify:\/\/shop_images\/Ina_Logo_10x10-01_89d9b24d-25d3-45ec-9915-0449d9ade8a0.png",
           "logo_max_width": 260,
           "header_color": "#000000",
           "transparent_header_enable": true,
@@ -117,7 +117,7 @@
               "text_alignment": "center",
               "slide_heading": "Bracelets",
               "slide_subheading": "",
-              "button_label": "See our collection",
+              "button_label": "shop now",
               "button_link": "shopify:\/\/collections\/bracelets",
               "slide_text_color": "#ffffff",
               "slide_button_label_color": "#000000",
@@ -133,8 +133,8 @@
               "image_overlay_opacity": 31,
               "text_alignment": "center",
               "slide_heading": "Rings",
-              "slide_subheading": "Check out our",
-              "button_label": "see the collection",
+              "slide_subheading": "",
+              "button_label": "shop now",
               "button_link": "shopify:\/\/collections\/rings",
               "slide_text_color": "#ffffff",
               "slide_button_label_color": "#000000",
@@ -239,8 +239,8 @@
       "newsletter": {
         "type": "newsletter",
         "settings": {
-          "heading": "Subscribe to our newsletter",
-          "subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+          "heading": "",
+          "subheading": "<p>Sign up for exclusive deal<\/p>"
         }
       },
       "footer": {
@@ -258,12 +258,12 @@
           "1587741920349-0": {
             "type": "slide",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/IMG_20200609_231353.jpg",
               "image_position": "center center",
               "image_overlay": true,
               "image_overlay_opacity": 25,
               "text_alignment": "center",
-              "slide_heading": "Hero Banner",
+              "slide_heading": "",
               "slide_subheading": "An introductory",
               "button_label": "Shop now",
               "button_link": "",
@@ -275,13 +275,64 @@
           "1587741920349-1": {
             "type": "slide",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/DSC_0822.jpg",
               "image_position": "center center",
               "image_overlay": true,
               "image_overlay_opacity": 25,
               "text_alignment": "center",
-              "slide_heading": "Hero Banner",
+              "slide_heading": "",
+              "slide_subheading": "strong lines",
+              "button_label": "Shop now",
+              "button_link": "",
+              "slide_text_color": "#ffffff",
+              "slide_button_label_color": "#000000",
+              "slide_button_background_color": "#ffffff"
+            }
+          },
+          "1591889410835": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/78346754_2530422433743496_4776522164553646080_n_900x_bc152413-8830-4ea5-93ee-4ae5b22ab45e.png",
+              "image_position": "center center",
+              "image_overlay": true,
+              "image_overlay_opacity": 25,
+              "text_alignment": "center",
+              "slide_heading": "",
+              "slide_subheading": "modern elegance",
+              "button_label": "Shop now",
+              "button_link": "",
+              "slide_text_color": "#ffffff",
+              "slide_button_label_color": "#000000",
+              "slide_button_background_color": "#ffffff"
+            }
+          },
+          "1591889429248": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSC_0571.jpg",
+              "image_position": "center center",
+              "image_overlay": true,
+              "image_overlay_opacity": 25,
+              "text_alignment": "center",
+              "slide_heading": "",
               "slide_subheading": "An introductory",
+              "button_label": "Shop now",
+              "button_link": "",
+              "slide_text_color": "#ffffff",
+              "slide_button_label_color": "#000000",
+              "slide_button_background_color": "#ffffff"
+            }
+          },
+          "1591890675882": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1.jpg",
+              "image_position": "center center",
+              "image_overlay": true,
+              "image_overlay_opacity": 25,
+              "text_alignment": "center",
+              "slide_heading": "",
+              "slide_subheading": "unique curves",
               "button_label": "Shop now",
               "button_link": "",
               "slide_text_color": "#ffffff",
@@ -292,12 +343,15 @@
         },
         "block_order": [
           "1587741920349-0",
-          "1587741920349-1"
+          "1587741920349-1",
+          "1591889410835",
+          "1591889429248",
+          "1591890675882"
         ],
         "settings": {
           "home_hero_height": "full",
-          "hero_home_auto": false,
-          "home_hero_auto_speed": 5
+          "hero_home_auto": true,
+          "home_hero_auto_speed": 3
         }
       },
       "password-header": {
